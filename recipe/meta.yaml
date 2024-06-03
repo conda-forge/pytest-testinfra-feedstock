@@ -1,5 +1,5 @@
 {% set name = "pytest-testinfra" %}
-{% set version = "10.0.0" %}
+{% set version = "10.1.1" %}
 
 
 package:
@@ -8,7 +8,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/pytest-testinfra-{{ version }}.tar.gz
-  sha256: 2fb7d0185458a9ba669ff14d0ddbec8b3900c6bde3fb6fad9b097374ce4ab77d
+  sha256: a876f1453a01b58d94d9d936dd50344c2c01ac7880a2b41d15bdf233aed9cf1f
 
 build:
   number: 0
