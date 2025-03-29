@@ -1,5 +1,5 @@
 {% set name = "pytest-testinfra" %}
-{% set version = "10.1.1" %}
+{% set version = "10.2.1" %}
 
 
 package:
@@ -7,11 +7,11 @@ package:
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/pytest-testinfra-{{ version }}.tar.gz
-  sha256: a876f1453a01b58d94d9d936dd50344c2c01ac7880a2b41d15bdf233aed9cf1f
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name | replace('-', '_') }}-{{ version }}.tar.gz
+  sha256: c468fc58f6493f3ff17c8d3e8151d6d5ebeb5c40f23d9e4590e1fd8083881ef2
 
 build:
-  number: 1
+  number: 0
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
@@ -19,8 +19,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools_scm
-    - setuptools
+    - hatchling
   run:
     - pytest !=3.0.2
     - python >={{ python_min }}
