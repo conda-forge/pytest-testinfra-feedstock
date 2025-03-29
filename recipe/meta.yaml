@@ -19,8 +19,7 @@ requirements:
   host:
     - pip
     - python {{ python_min }}
-    - setuptools_scm
-    - setuptools
+    - hatchling
   run:
     - pytest !=3.0.2
     - python >={{ python_min }}
